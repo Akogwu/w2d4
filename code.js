@@ -17,11 +17,12 @@ Array.prototype.bubbleSort = function () {
         }
     }
 
-    console.log(this);
+    return this;
 }
 
 let arr = [6,4,0,3,-2,1];
-arr.bubbleSort();
+
+console.log(arr.bubbleSort());
 
 
 function Person() {}
@@ -36,12 +37,15 @@ Teacher.prototype = Object.create(Person.prototype);
 
 Teacher.prototype.teach = function (subject) {
     this.subject = subject;
-    console.log(this.name+ " is now teaching "+ this.subject);
+    return this.name+ " is now teaching "+ this.subject;
 }
 
 
 let faculty = new Teacher();
 faculty.initialize("Emmanuel");
-faculty.teach("Web Application Programming");
+let result = faculty.teach("Web Application Programming");
+console.log(result);
+
+
 
 
